@@ -1,0 +1,160 @@
+<!doctype html>
+<!--
+	          __                      __             __    _
+	   _____ / /_ _____ __  __ _____ / /_ ___   ____/ /   (_)____
+	  / ___// __// ___// / / // ___// __// _ \ / __  /   / // __ \
+	 (__  )/ /_ / /   / /_/ // /__ / /_ /  __// /_/ /_  / // /_/ /
+	/____/ \__//_/    \__,_/ \___/ \__/ \___/ \__,_/(_)/_/ \____/
+
+	structed.io - masterless Puppet bootstraper
+-->
+<html ng-app="constructed">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>con.structed.io - masterless Puppet bootstraper</title>
+  <link href="app.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@operatehappy">
+	<meta name="twitter:title" content="con.structed.io - masterless Puppet bootstrapper">
+	<meta name="twitter:description" content="Deploy and configure Puppet on your server with a single line of code.">
+	<meta name="twitter:domain" content="con.structed.io">
+</head>
+
+<body class="language-bash">
+
+<header class="clearfix">
+	<ul
+		class="topMenu"
+		ng-init="topMenu = false;"
+		ng-class="{ 'animate-in': topMenu, 'animate-out': topMenu == false }"
+	>
+		<li>
+			<a href="/about/" target="_blank" title="learn more about our Puppet bootstrapper">
+				<i class="fa fa-info-circle"></i>
+				<br>
+				about
+			</a>
+		</li>
+
+		<li>
+			<a href="https://structedio.atlassian.net/secure/CreateIssueDetails!init.jspa?pid=10004&issuetype=1&summary=one-sentence-summary+of+the+problem+you+are+experiencing&priority=5&components=10101&assignee=kerim&reporter=kerim&environment=describe+your+environment+here,+including+versions+and+architecture&description=I+am+having+a+problem+with+the+Bootstrapper,+here+is+what+is+going+wrong:" target="_blank" title="go to the structed.io site and discover more of our tools">
+				<i class="fa fa-bug"></i>
+				<br>
+				report issues
+			</a>
+		</li>
+
+		<li>
+			<a href="http://structed.io/" target="_blank" title="go to the structed.io website and discover more of our tools">
+				<i class="fa fa-globe"></i>
+				<br>
+				structed.io
+			</a>
+		</li>
+
+		<li>
+			<a href="http://structed.io/blog" target="_blank" title="go to the structed.io blog and read our thoughts on infrastructure and DevOps">
+				<i class="fa fa-bullhorn"></i>
+				<br>
+				blog
+			</a>
+		</li>
+	</ul>
+
+  <nav class="clearfix">
+    <div class="wrapper">
+      <div class="logo pull-left">con.structed.io</div>
+      <div class="menu pull-right">
+      	<i
+	      	class="fa fa-bars menu-toggle"
+      		ng-click="topMenu = !topMenu;"
+      		ng-class="{ 'fa-rotate-90': topMenu }"
+      	></i>
+      </div>
+    </div>
+  </nav>
+  <div class="wrapper clearfix">
+    <div style="width: 100%; height: 400px; display: table;">
+      <div class="herotext">
+        <h1>Puppet Bootstrapper</h1>
+        <h2>Deploy and configure Puppet on your server with a single line of code.</h2>
+        <a href="#download" class="btn btn-extralarge active">Download</a>
+        <a href="#learn-more" class="btn btn-large">Learn more</a>
+      </div>
+      <div style="display: table-cell; width: 335px; background: url(img/gingerbreadman.png) no-repeat;"></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrapper">
+
+  <section id="learn-more">
+    <article class="clearfix">
+      <img src="" alt="" class="pull-left" width="300" height="200">
+      <h3>Start with the latest version of Puppet.</h3>
+      <p>Ignite your deployment by starting out with the latest and greatest version of Puppet, Hiera and all the other tools you have come to love. No more fighting your way through multiple packages, GPG keys and architectures but a simple, all-in-one solution for your deployment.</p>
+    </article>
+
+    <article class="clearfix">
+      <img src="" alt="" class="pull-right" width="300" height="200">
+      <h3>Tap into your Git repository.</h3>
+      <p>Sync your version-controlled manifests with your <abbr title="Server, instance, box - call it however you want!">server</abbr> - including submodules and external dependencies. <br><br>Not using Git? No problem! We support Subversion just as well and are actively working on Mercurial support.</p>
+    </article>
+
+    <article class="clearfix">
+      <img src="" alt="" class="pull-left" width="300" height="200">
+      <h3>Automatically updated manifests are here.</h3>
+      <p>Getting all your Puppet files locally is just the first step: this bootstrapper will keep checking in with the mothership to get all the latest changes, at regular intervals, and will apply them instantly.
+      	<br><br>
+      	All the magic can easily be disabled, if you want to sit in the captain's chair every now and then.</p>
+    </article>
+  </section>
+
+  <section class="introtext" id="download">
+    <h3>Getting Started</h3>
+    <p>Install the bootstrapper by copying and pasting the line below on a fresh server - no matter if it is RHEL, CentOS or Amazon's Linux AMI - we've got you covered. Debian or Ubuntu lover? We're working on making you happy, too!</p>
+  </section>
+
+  <section class="clearfix">
+    <article class="code pull-left half alpha">
+      <h3>Standard mode</h3>
+      <p class="instruction">Fast-travel to deployment: hardly any debug information on your screen. You like it clean.
+      	<br>
+      	<br>All information will still be logged to the <em>puppet-bootstrapper.log</em> file.
+      </p>
+      	<pre><code>sh -c "$(curl -s http://con.structed.io/build)"</pre></code>
+    </article>
+    <article class="code pull-left half">
+      <h3>Debug mode</h3>
+      <p class="instruction">You're in for the long haul: this route will show you all the steps as they are carried out.
+      	<br><br>All information will be shown on your screen <em>and</em> logged to the <em>puppet-bootstrapper.log</em> file.</p>
+      	<pre><code>sh -c "$(curl http://con.structed.io/build)" -- -v</pre></code>
+    </article>
+
+    <article class="code pull-left">
+      <h3>Fully-automated mode</h3>
+      <p class="instruction">Deploy without having to log in to your server by specifying the <code>BOOTSTRAP_REPO</code> environment variable and your repository will automatically be configured. Perfect for setups with access to <em>cloud-init</em> and similar tools.
+      	<br><br>All information will be logged to the <em>puppet-bootstrapper.log</em> file.</p>
+
+    	<!-- <i
+    		class="fa fa-clipboard clipboard"
+    		clip-copy="('export BOOTSTRAP_REPO="https://user:pass@structed.io/puppet.git"; sh -c "$(curl http://con.structed.io/build)"');"
+    	></i> -->
+      <pre><code>export BOOTSTRAP_REPO="https://user:pass@structed.io/puppet.git"; sh -c "$(curl http://con.structed.io/build)"</code></pre>
+    </article>
+  </section>
+
+</div>
+
+<footer id="footer">
+  <div class="wrapper">
+    <!-- text -->
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
