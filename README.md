@@ -1,39 +1,35 @@
-# Code Checking Toolkit for Codecademy
+# Companion Site for Puppet 3.x Bootstrapper
 
-This repository contains a collection of tools useful for checking snippets from sites like [Codecademy](http://codecademy.com/).
+> Deploy and configure [Puppet](https://puppet.com) on your server with a single line of code.
 
-# Installation
+## This project is no longer maintained
 
-To get started with this toolbox, carry out the following steps:
+This repository is no longer actively maintained and is only made available here for reference.
 
-1.) Make sure you have [Node](http://nodejs.org/) installed. You can verify this by starting `Terminal.app` or any other shell emulator like PuTTY and executing the following command:
+What follows is the original `README.md`:
 
-```
-node --version
-```
+---
 
-This should tell you the version you are running on. The result will likely be along the lines of `v0.12.01`.
+## Table of Contents
 
-If the above command gives you an error, follow the installation instructions on the `Node.js` site.
+- [Author Information](#author-information)
+- [License](#license)
 
-2.) Clone this Git repository using `Terminal.app` or any other shell emulator like PuTTY and executing the following command:
+## Author Information
 
-```
-git clone https://bitbucket.org/ksatirli/codechecker.git
-```
+This repository was maintained by the individuals listed below.
 
-This will _clone_ the contents of the repository into a sub-directory of the current directory you are in.
+- [Kerim Satirli](https://github.com/ksatirli)
 
-3.) Install the required Node modules using `Terminal.app` or any other shell emulator like PuTTY and executing the following command:
+## License
 
-```
-cd codechecker
+Copyright 2013-2017 [Kerim Satirli](https://github.com/ksatirli)
 
-npm install
-```
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
 
-The `npm install` step takes a bit of time to download and install all associated modules. Be patient.
+You may obtain a copy of the License at [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-# Usage
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an _"AS IS"_ basis, without WARRANTIES or conditions of any kind, either express or implied.
 
-To test your snippet, create a file with the `.js` extension and save it in the root of the repository then run the check using the `npm test` action using `Terminal.app` or any other shell emulator like PuTTY.
+
+See the License for the specific language governing permissions and limitations under the License.
