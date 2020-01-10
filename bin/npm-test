@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-# This script is used for the "npm test" action.
-
-# make sure to always pass -- so Nodemon doesn't eat up CLI args
-grunt code-quality
